@@ -23,16 +23,22 @@ const { title } = Astro.props;
   @import url('https://necolas.github.io/normalize.css/8.0.1/normalize.css');
   @import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@500&family=Montserrat:wght@300;500;700&display=swap');
 
+  :root {
+    --gray-900: #171717;
+    --gray-500: #2e2e2e;
+    --gray-200: #494949;
+  }
+
   html {
     font-family: 'Montserrat', sans-serif;
     font-size: 62.5%;
     box-sizing: border-box;
   }
 
-	body {
-		background: linear-gradient(to left, rgb(215 215 215), rgb(245 245 245));
-		min-height: 100vh;
-	}
+  body {
+    background: linear-gradient(to left, #d7d7d7, #f5f5f5);
+    min-height: 100vh;
+  }
 
   *,
   *::after,
@@ -42,13 +48,27 @@ const { title } = Astro.props;
     box-sizing: inherit;
   }
 
-	.container {
-		max-width: 1280px;
-		width: 90%;
-		margin: 0 auto;
-	}
+  .heading-one {
+    font-weight: 700;
+		color: var(--gray-900);
+    text-transform: uppercase;
+    font-size: 3rem;
+  }
 
-	.flex {
-		display: flex;
-	}
+  .heading-one {
+    font-weight: 700;
+		color: var(--gray-500);
+    text-transform: uppercase;
+    font-size: 2.5rem;
+  }
+
+  .container {
+    max-width: 1280px;
+    width: 90%;
+    margin: 0 auto;
+  }
+
+  .flex {
+    display: flex;
+  }
 </style>
