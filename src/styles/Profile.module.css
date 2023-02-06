@@ -1,0 +1,40 @@
+.profile {
+  gap: 1.5rem;
+}
+
+.arrows {
+  display: flex;
+}
+
+.arrows > span {
+  width: 24px;
+  font-size: 3rem;
+  color: #49494951;
+  animation-name: arrow;
+  animation-iteration-count: infinite;
+  animation-duration: 1s;
+}
+
+.profile img {
+  border-radius: 50%;
+  transition: 300ms;
+}
+
+.profile img:hover {
+  opacity: 0.8;
+  cursor: pointer;
+}
+
+@keyframes arrow {
+  from {
+    color: #49494951;
+  }
+
+  50% {
+    color: #494949;
+  }
+
+  to {
+    color: #49494951;
+  }
+}
