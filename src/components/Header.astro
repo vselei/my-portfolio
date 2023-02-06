@@ -1,5 +1,7 @@
 ---
 import ProfileImg from './Profile';
+
+const path = Astro.url.pathname;
 ---
 
 <header>
@@ -7,10 +9,19 @@ import ProfileImg from './Profile';
     <ProfileImg client:only />
     <nav class="menu">
       <ul class="desktop flex">
-        <li><a href="/">Home</a></li>
-        <li><a href="/about-me">Sobre Mim</a></li>
-        <li><a href="/skills">Habilidades</a></li>
-        <li><a href="/projects">Projetos</a></li>
+        <li><a href="/" class={path === '/' ? 'active' : ''}>Home</a></li>
+        <li>
+          <a href="/about-me" class={path === '/about-me' ? 'active' : ''}
+            >Sobre Mim</a>
+        </li>
+        <li>
+          <a href="/skills" class={path === '/skills' ? 'active' : ''}
+            >Habilidades</a>
+        </li>
+        <li>
+          <a href="/projects" class={path === '/projects' ? 'active' : ''}
+            >Projetos</a>
+        </li>
       </ul>
     </nav>
   </div>
@@ -47,6 +58,14 @@ import ProfileImg from './Profile';
   }
 
   .menu li a:hover::after {
+    width: 100%;
+  }
+
+  .menu li .active {
+    color: var(--gray-900);
+  }
+
+  .menu li .active::after {
     width: 100%;
   }
 </style>
