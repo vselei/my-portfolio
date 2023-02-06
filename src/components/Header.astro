@@ -20,4 +20,33 @@ import ProfileImg from './Profile';
   header {
     padding: 1rem 0;
   }
+
+  .menu .desktop {
+    gap: 3rem;
+  }
+
+  .menu li a {
+    font-size: 1.4rem;
+    text-transform: uppercase;
+    font-weight: 500;
+    color: rgb(73, 73, 73, 0.6);
+    transition: 300ms;
+  }
+
+  .menu li a::after {
+    content: '';
+    display: block;
+    width: 0;
+    height: 2px;
+    background-color: var(--gray-900);
+    transition: 300ms;
+  }
+
+  .menu li a:hover {
+    color: var(--gray-900);
+  }
+
+  .menu li a:hover::after {
+    width: 100%;
+  }
 </style>
