@@ -6,8 +6,8 @@
   width: 24px;
   font-size: 3rem;
   color: #49494951;
-  animation-name: arrow;
-  animation-iteration-count: infinite;
+  animation-name: arrow, appear;
+  animation-iteration-count: infinite, 1;
   animation-duration: 1s;
 }
 
@@ -22,5 +22,15 @@
 
   to {
     color: #49494951;
+  }
+}
+
+@keyframes appear {
+  from {
+    opacity: 0;
+  }
+
+  to {
+    opacity: 1;
   }
 }

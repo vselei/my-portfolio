@@ -18,7 +18,7 @@ const ProfileImg = () => {
             onMouseLeave={() => setClickMessage(false)}
             className={`${styles.message} flex align-center justify-center`}
           >
-            Clique!
+            Clique
           </p>
         )}
         <img
