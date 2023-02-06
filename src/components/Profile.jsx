@@ -1,64 +1,23 @@
-import styles from '../styles/Profile.module.css'
+import { useState } from 'react';
+import styles from '../styles/Profile.module.css';
+import Arrows from './Arrows';
+import ProfileName from './ProfileName';
+
+import profileImg from '/img/profile.webp';
 
 const ProfileImg = () => {
+  const [name, setName] = useState(false);
+
   return (
     <div className={`${styles.profile} flex align-center`}>
       <img
+        onClick={() => setName(!name)}
         width="60"
         height="60"
-        src="/img/profile.webp"
+        src={profileImg}
         alt="Victor Seleimend"
       />
-      <div className={styles.arrows}>
-        <span>
-          <svg
-            xmlns="http://www.w3.org/2000/svg"
-            fill="none"
-            viewBox="0 0 24 24"
-            stroke-width="1.5"
-            stroke="currentColor"
-            className="w-6 h-6"
-          >
-            <path
-              stroke-linecap="round"
-              stroke-linejoin="round"
-              d="M8.25 4.5l7.5 7.5-7.5 7.5"
-            ></path>
-          </svg>
-        </span>
-        <span>
-          <svg
-            xmlns="http://www.w3.org/2000/svg"
-            fill="none"
-            viewBox="0 0 24 24"
-            stroke-width="1.5"
-            stroke="currentColor"
-            className="w-6 h-6"
-          >
-            <path
-              stroke-linecap="round"
-              stroke-linejoin="round"
-              d="M8.25 4.5l7.5 7.5-7.5 7.5"
-            ></path>
-          </svg>
-        </span>
-        <span>
-          <svg
-            xmlns="http://www.w3.org/2000/svg"
-            fill="none"
-            viewBox="0 0 24 24"
-            stroke-width="1.5"
-            stroke="currentColor"
-            className="w-6 h-6"
-          >
-            <path
-              stroke-linecap="round"
-              stroke-linejoin="round"
-              d="M8.25 4.5l7.5 7.5-7.5 7.5"
-            ></path>
-          </svg>
-        </span>
-      </div>
+      {name ? <ProfileName /> : <Arrows />}
     </div>
   );
 };
