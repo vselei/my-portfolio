@@ -11,7 +11,7 @@
         alt="Victor Seleimend"
       />
       <div class="arrows">
-        <span class="arrow-one"
+        <span
           ><svg
             xmlns="http://www.w3.org/2000/svg"
             fill="none"
@@ -26,7 +26,7 @@
               d="M8.25 4.5l7.5 7.5-7.5 7.5"></path>
           </svg>
         </span>
-        <span class="arrow-two"
+        <span
           ><svg
             xmlns="http://www.w3.org/2000/svg"
             fill="none"
@@ -41,7 +41,7 @@
               d="M8.25 4.5l7.5 7.5-7.5 7.5"></path>
           </svg>
         </span>
-        <span class="arrow-three"
+        <span
           ><svg
             xmlns="http://www.w3.org/2000/svg"
             fill="none"
@@ -82,28 +82,23 @@
     display: flex;
   }
 
-  .arrows > span[class^='arrow'] > svg {
-    width: 30px;
+  .arrows > span {
+    width: 24px;
     font-size: 3rem;
     color: #49494951;
     animation-name: arrow;
     animation-iteration-count: infinite;
-  }
-
-  .arrow-one svg {
-    animation-duration: 1s;
-  }
-
-  .arrow-two svg {
-    animation-duration: 1s;
-  }
-
-  .arrow-three svg {
     animation-duration: 1s;
   }
 
   .profile img {
     border-radius: 50%;
+    transition: 300ms;
+  }
+
+  .profile img:hover {
+    opacity: 0.8;
+    cursor: pointer;
   }
 
   @keyframes arrow {
