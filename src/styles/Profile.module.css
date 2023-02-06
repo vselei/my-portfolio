@@ -11,3 +11,19 @@
   opacity: 0.8;
   cursor: pointer;
 }
+
+.profileName {
+  animation-name: nameAppear;
+  animation-duration: 1s;
+  animation-iteration-count: 1;
+}
+
+@keyframes nameAppear {
+  from {
+    opacity: 0;
+  }
+
+  to {
+    opacity: 1;
+  }
+}
