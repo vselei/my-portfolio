@@ -2,14 +2,121 @@
 ---
 
 <header>
-  <div class="container">
-    <div class="img">
+  <div class="container flex space-between align-center">
+    <div class="profile flex align-center">
       <img
         width="60"
         height="60"
         src="/img/profile.webp"
         alt="Victor Seleimend"
       />
+      <div class="arrows">
+        <span class="arrow-one"
+          ><svg
+            xmlns="http://www.w3.org/2000/svg"
+            fill="none"
+            viewBox="0 0 24 24"
+            stroke-width="1.5"
+            stroke="currentColor"
+            class="w-6 h-6"
+          >
+            <path
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              d="M8.25 4.5l7.5 7.5-7.5 7.5"></path>
+          </svg>
+        </span>
+        <span class="arrow-two"
+          ><svg
+            xmlns="http://www.w3.org/2000/svg"
+            fill="none"
+            viewBox="0 0 24 24"
+            stroke-width="1.5"
+            stroke="currentColor"
+            class="w-6 h-6"
+          >
+            <path
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              d="M8.25 4.5l7.5 7.5-7.5 7.5"></path>
+          </svg>
+        </span>
+        <span class="arrow-three"
+          ><svg
+            xmlns="http://www.w3.org/2000/svg"
+            fill="none"
+            viewBox="0 0 24 24"
+            stroke-width="1.5"
+            stroke="currentColor"
+            class="w-6 h-6"
+          >
+            <path
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              d="M8.25 4.5l7.5 7.5-7.5 7.5"></path>
+          </svg>
+        </span>
+      </div>
     </div>
+    <nav class="menu">
+      <ul class="desktop flex">
+        <li><a href="/">Home</a></li>
+        <li><a href="/about-me">Sobre Mim</a></li>
+        <li><a href="/skills">Habilidades</a></li>
+        <li><a href="/projects">Projetos</a></li>
+      </ul>
+    </nav>
   </div>
 </header>
+
+<style>
+  header {
+    padding: 1rem 0;
+  }
+
+  .profile {
+    gap: 1.5rem;
+  }
+
+  .arrows {
+    display: flex;
+  }
+
+  .arrows > span[class^='arrow'] > svg {
+    width: 30px;
+    font-size: 3rem;
+    color: #49494951;
+    animation-name: arrow;
+    animation-iteration-count: infinite;
+  }
+
+  .arrow-one svg {
+    animation-duration: 1s;
+  }
+
+  .arrow-two svg {
+    animation-duration: 1s;
+  }
+
+  .arrow-three svg {
+    animation-duration: 1s;
+  }
+
+  .profile img {
+    border-radius: 50%;
+  }
+
+  @keyframes arrow {
+    from {
+      color: #49494951;
+    }
+
+    50% {
+      color: #494949;
+    }
+
+    to {
+      color: #49494951;
+    }
+  }
+</style>
