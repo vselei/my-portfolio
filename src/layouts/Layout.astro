@@ -19,4 +19,36 @@ const { title } = Astro.props;
     <slot />
   </body>
 </html>
-<style is:global></style>
+<style is:global>
+  @import url('https://necolas.github.io/normalize.css/8.0.1/normalize.css');
+  @import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@500&family=Montserrat:wght@300;500;700&display=swap');
+
+  html {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 62.5%;
+    box-sizing: border-box;
+  }
+
+	body {
+		background: linear-gradient(to left, rgb(215 215 215), rgb(245 245 245));
+		min-height: 100vh;
+	}
+
+  *,
+  *::after,
+  *::before {
+    margin: 0;
+    padding: 0;
+    box-sizing: inherit;
+  }
+
+	.container {
+		max-width: 1280px;
+		width: 90%;
+		margin: 0 auto;
+	}
+
+	.flex {
+		display: flex;
+	}
+</style>
