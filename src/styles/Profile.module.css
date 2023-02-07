@@ -25,6 +25,11 @@
 .profile img {
   border-radius: 50%;
   transition: 300ms;
+  opacity: 1;
+  animation-name: blink-img;
+  animation-duration: 1s;
+  animation-iteration-count: infinite;
+  animation-direction: alternate;
 }
 
 .profileName {
@@ -36,6 +41,16 @@
 @keyframes appear {
   from {
     opacity: 0;
+  }
+
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes blink-img {
+  from {
+    opacity: .8;
   }
 
   to {
