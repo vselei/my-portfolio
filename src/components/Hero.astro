@@ -66,5 +66,48 @@
 
   .tech-img {
     width: calc(35% - 2rem);
+    animation-name: imgMoving;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+    position: relative;
+  }
+
+  .tech-img:nth-child(1) {
+    animation-duration: 15s;
+  }
+
+  .tech-img:nth-child(2) {
+    animation-duration: 20s;
+  }
+
+  .tech-img:nth-child(3) {
+    animation-duration: 10s;
+  }
+
+  @keyframes imgMoving {
+    from {
+      left: 0;
+      top: 0;
+    }
+
+    25% {
+      left: 10%;
+      top: 5%;
+    }
+
+    50% {
+      left: 6%;
+      top: -10%;
+    }
+
+    75% {
+      left: -5%;
+      top: 10%;
+    }
+
+    100% {
+      left: 0;
+      top: 0;
+    }
   }
 </style>
