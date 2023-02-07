@@ -10,9 +10,12 @@
         Apaixonado por tecnologia desde cedo, comecei a programar com apenas <strong
           >13 anos</strong
         >! Desde então venho fazendo vários cursos, para aprimorar meu
-        conhecimento e evoluir como profissional. Que tal me conhecer mais um
-        pouco? Basta clicar no botão abaixo ;)
+        conhecimento e evoluir como profissional.
       </p>
+      <p class="uppercase">
+        Que tal me conhecer mais um pouco? Basta clicar no botão abaixo ;)
+      </p>
+      <a class="cta uppercase" href="/contact">Entre em contato</a>
     </div>
     <div class="images flex-5">
       <div class="bg-img flex justify-center">
@@ -93,11 +96,6 @@
     animation-duration: 10s;
   }
 
-  .info {
-    flex: 50%;
-    align-self: center;
-  }
-
   @keyframes imgMoving {
     from {
       left: 0;
@@ -123,5 +121,44 @@
       left: 0;
       top: 0;
     }
+  }
+
+  .info {
+    flex: 50%;
+    align-self: center;
+  }
+
+  .info h3 {
+    margin-bottom: 1.5rem;
+  }
+
+  .info p {
+    font-size: 1.3rem;
+    color: var(--gray-200);
+  }
+
+  .info p:first-of-type {
+    margin-bottom: 1rem;
+  }
+
+  .info p:last-of-type {
+    margin-bottom: 4rem;
+  }
+
+  .cta {
+    background-color: var(--gray-900);
+    color: #d7d7d7;
+    padding: 1.5rem 3rem;
+    font-size: 1.3rem;
+    border-radius: .5rem;
+    transition: 300ms;
+    border: 1px solid var(--gray-900);
+    font-weight: 900;
+    letter-spacing: 1px;
+  }
+
+  .cta:hover {
+    background-color: transparent;
+    color: var(--gray-900);
   }
 </style>
