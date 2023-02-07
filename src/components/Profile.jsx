@@ -16,12 +16,13 @@ const ProfileImg = () => {
           <p
             onClick={() => setName(!name)}
             onMouseLeave={() => setClickMessage(false)}
-            className={`${styles.message} flex align-center justify-center`}
+            className={`${styles.message}`}
           >
             Clique
           </p>
         )}
         <img
+          onClick={() => setName(!name)}
           onMouseMove={() => setClickMessage(true)}
           width="60"
           height="60"

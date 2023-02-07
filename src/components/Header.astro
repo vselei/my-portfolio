@@ -33,6 +33,16 @@ const path = Astro.url.pathname;
     padding: 1rem 0;
   }
 
+  .menu {
+    display: none;
+  }
+
+  @media (min-width: 768px) {
+    .menu {
+      display: block;
+    }
+  }
+
   .menu .desktop {
     gap: 3rem;
   }
