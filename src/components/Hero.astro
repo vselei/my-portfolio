@@ -2,7 +2,7 @@
 ---
 
 <section class="hero">
-  <div class="container flex">
+  <div class="container grid two-columns">
     <div class="info">
       <h2 class="heading-one">myPortfolio</h2>
       <h3 class="heading-two uppercase">Oiee, me chamo Victor Seleimend!</h3>
@@ -15,9 +15,24 @@
       </p>
     </div>
     <div class="images">
-      
+      <div class="bg-img"></div>
     </div>
   </div>
 </section>
 
-<style></style>
+<style>
+  .images {
+    position: relative;
+  }
+
+  .bg-img {
+    background-image: url(/img/computers.svg);
+    background-position: center;
+    background-size: cover;
+    filter: grayscale(100%);
+    opacity: .09;
+    max-width: 100%;
+    height: 500px;
+  }
+
+</style>
