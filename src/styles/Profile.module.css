@@ -27,7 +27,7 @@
   transition: 300ms;
   opacity: 1;
   animation-name: blink-img;
-  animation-duration: 1s;
+  animation-duration: 2s;
   animation-iteration-count: infinite;
   animation-direction: alternate;
 }
@@ -57,7 +57,7 @@
 
 @keyframes blink-img {
   from {
-    opacity: 0.8;
+    opacity: .8;
   }
 
   to {
