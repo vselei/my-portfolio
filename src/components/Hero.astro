@@ -2,8 +2,8 @@
 ---
 
 <section class="hero">
-  <div class="container grid two-columns">
-    <div class="info">
+  <div class="container flex">
+    <div class="info flex-5">
       <h2 class="heading-one">myPortfolio</h2>
       <h3 class="heading-two uppercase">Oiee, me chamo Victor Seleimend!</h3>
       <p class="uppercase">
@@ -14,7 +14,7 @@
         pouco? Basta clicar no botão abaixo ;)
       </p>
     </div>
-    <div class="images">
+    <div class="images flex-5">
       <div class="bg-img flex justify-center">
         <div class="tech-img">
           <svg viewBox="0 0 128 128">
@@ -46,14 +46,23 @@
 </section>
 
 <style>
+  .hero {
+    margin-top: 5rem;
+  }
+
+  .hero .container {
+    height: calc(100vh - 85px - 5rem);
+  }
+
   .images {
     position: relative;
   }
 
   .bg-img {
     background: url(/img/computers.svg);
-    background-position: center;
-    background-size: cover;
+    background-position: top;
+    background-size: contain;
+    background-repeat: no-repeat;
     filter: grayscale(100%);
     opacity: 0.1;
     width: 100%;
@@ -82,6 +91,11 @@
 
   .tech-img:nth-child(3) {
     animation-duration: 10s;
+  }
+
+  .info {
+    flex: 50%;
+    align-self: center;
   }
 
   @keyframes imgMoving {

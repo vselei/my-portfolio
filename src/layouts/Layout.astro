@@ -82,21 +82,19 @@ const { title } = Astro.props;
 
   .flex {
     display: flex;
+    flex-wrap: wrap;
   }
 
-  .grid {
-    display: grid;
-  }
-
-  .two-columns {
-    grid-template-columns: 1fr;
+  .flex-5 {
+    flex: 100%;
   }
 
   @media (min-width: 768px) {
-    .two-columns {
-      grid-template-columns: 1fr 1fr;
+    .flex-5 {
+      flex: 50%;
     }
   }
+
   .space-between {
     justify-content: space-between;
   }
