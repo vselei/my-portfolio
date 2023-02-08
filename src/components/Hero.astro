@@ -50,6 +50,7 @@
   .hero {
     margin-top: 5rem;
     height: calc(100vh - 5rem - 85px);
+    overflow: hidden;
   }
 
   .hero .container {
@@ -105,6 +106,59 @@
     .bg-img {
       width: 100%;
       position: relative;
+      left: -13%;
+    }
+  }
+
+  .info > * {
+    animation-iteration-count: 1;
+    position: relative;
+    animation-name: appearFromLeft;
+  }
+
+  .info .heading-one {
+    animation-duration: 2s;
+  }
+
+  .info .heading-two {
+    animation-duration: 2.2s;
+  }
+
+  .info p:first-of-type {
+    animation-duration: 2.4s;
+  }
+
+  .info p:last-of-type {
+    animation-duration: 2.8s;
+  }
+
+  .info .cta {
+    animation-duration: 2.8s;
+  }
+
+  @keyframes appearFromLeft {
+    from {
+      left: -100%;
+    }
+
+    to {
+      left: 0;
+    }
+  }
+
+  .bg-img {
+    animation-iteration-count: 1;
+    position: relative;
+    animation-name: appearFromRight;
+    animation-duration: 2s;
+  }
+
+  @keyframes appearFromRight {
+    from {
+      left: 100%;
+    }
+
+    to {
       left: -13%;
     }
   }
