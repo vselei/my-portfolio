@@ -31,6 +31,20 @@ const path = Astro.url.pathname;
   header {
     height: 85px;
     padding: 1rem 0;
+    position: relative;
+    animation-iteration-count: 1;
+    animation-duration: 1s;
+    animation-name: appearFromTop;
+  }
+
+  @keyframes appearFromTop {
+    from {
+      top: calc(-85px + 2rem);
+    }
+
+    to {
+      top: 0;
+    }
   }
 
   .menu {
