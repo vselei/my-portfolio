@@ -48,9 +48,9 @@
 
 <style>
   .hero {
-    margin-top: 5rem;
     height: calc(100vh - 5rem - 85px);
     overflow: hidden;
+    padding: 2rem 0;
   }
 
   .hero .container {
@@ -97,18 +97,6 @@
   .tech-img:nth-child(3) {
     animation-duration: 10s;
   }
-  
-  @media (min-width: 768px) {
-    .hero .container {
-      flex-direction: row;
-    }
-
-    .bg-img {
-      width: 100%;
-      position: relative;
-      left: -13%;
-    }
-  }
 
   .info > * {
     animation-iteration-count: 1;
@@ -117,23 +105,23 @@
   }
 
   .info .heading-one {
-    animation-duration: 2s;
+    animation-duration: 1.2s;
   }
 
   .info .heading-two {
-    animation-duration: 2.2s;
+    animation-duration: 1.4s;
   }
 
   .info p:first-of-type {
-    animation-duration: 2.4s;
+    animation-duration: 1.6s;
   }
 
   .info p:last-of-type {
-    animation-duration: 2.8s;
+    animation-duration: 1.8s;
   }
 
   .info .cta {
-    animation-duration: 2.8s;
+    animation-duration: 2s;
   }
 
   @keyframes appearFromLeft {
@@ -159,7 +147,7 @@
     }
 
     to {
-      left: -13%;
+      left: 0;
     }
   }
 
@@ -187,6 +175,27 @@
     100% {
       left: 0;
       top: 0;
+    }
+  }
+
+  @media (min-width: 768px) {
+    .hero .container {
+      flex-direction: row;
+    }
+
+    .bg-img {
+      width: 100%;
+      position: relative;
+      left: -13%;
+    }
+    @keyframes appearFromRight {
+      from {
+        left: 100%;
+      }
+
+      to {
+        left: -13%;
+      }
     }
   }
 
