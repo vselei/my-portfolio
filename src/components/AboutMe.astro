@@ -1,8 +1,11 @@
 ---
+import programmerGif from '/img/programmer.gif';
 ---
 
 <section class="about flex">
-  <div class="about-img flex-5"></div>
+  <div class="about-img flex-5">
+    <img width="450" height="300" src={programmerGif} />
+  </div>
   <div class="about-info flex-5 uppercase topic-text">
     <h2 class="heading-one topic-heading">Um pouco sobre mim</h2>
     <p>
@@ -36,5 +39,11 @@
 
   .actions {
     margin-top: 3.5rem;
+  }
+
+  .about-img img {
+    filter: opacity(.05);
+    width: 100%;
+    object-fit: contain;
   }
 </style>
