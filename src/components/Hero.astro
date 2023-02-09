@@ -48,7 +48,9 @@
 
 <style>
   .hero {
-    height: calc(100vh - 5rem - 85px);
+    position: relative;
+    top: 85px;
+    height: calc(100vh - 85px);
     overflow: hidden;
     padding: 2rem 0;
   }
@@ -181,6 +183,7 @@
   @media (min-width: 768px) {
     .hero .container {
       flex-direction: row;
+      align-items: center;
     }
 
     .bg-img {
