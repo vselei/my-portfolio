@@ -7,6 +7,7 @@ header {
   animation-duration: 1s;
   animation-name: appearFromTop;
   z-index: 1;
+  transition: 300ms;
 }
 
 @keyframes appearFromTop {

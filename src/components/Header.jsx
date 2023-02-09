@@ -2,9 +2,30 @@ import ProfileImg from './Profile';
 
 import styles from '../styles/Header.module.css';
 
+import { useEffect, useState } from 'react';
+
 const Header = ({ path }) => {
+  const [scroll, setScroll] = useState(0);
+
+  useEffect(() => {
+    const scrollDetect = () => {
+      setScroll(window.scrollY);
+    };
+
+    window.addEventListener('scroll', scrollDetect);
+
+    return () => {
+      window.removeEventListener('scroll', scrollDetect);
+    };
+  }, []);
+
   return (
-    <header>
+    <header
+      style={{
+        background: scroll > 1 && 'linear-gradient(to left, #d7d7d7, #f5f5f5)',
+        boxShadow: scroll > 1 && '1px 1px 5px #d7d7d77f'
+      }}
+    >
       <div className="container flex space-between align-center">
         <ProfileImg />
         <nav className={styles.menu}>
@@ -23,7 +44,10 @@ const Header = ({ path }) => {
               </a>
             </li>
             <li>
-              <a href="/skills" className={path === '/skills' ? styles.active : ''}>
+              <a
+                href="/skills"
+                className={path === '/skills' ? styles.active : ''}
+              >
                 Habilidades
               </a>
             </li>
