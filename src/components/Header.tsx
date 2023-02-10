@@ -30,7 +30,7 @@ const Header = ({ path }: { path: string }) => {
       style={{
         background:
           scroll > 1 ? 'linear-gradient(to left, #d7d7d7, #f5f5f5)' : '',
-        boxShadow: scroll > 1 ? '1px 1px 5px #d7d7d77f' : ''
+        boxShadow: scroll > 1 ? '1px 1px 5px #adadad34' : ''
       }}
     >
       <div className="container flex space-between align-center">
