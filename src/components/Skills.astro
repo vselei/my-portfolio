@@ -12,7 +12,7 @@
           <div id="green"></div>
         </div>
         <div id="screen">
-          <code class="font">root@10.0.0.1:~$ my-hard-skills</code>
+          <code class="font">root@10.0.0.1:~$ hard-skills</code>
           <samp class="font">
             <p>---- list ----</p>
             <p>Internet</p>
@@ -52,18 +52,29 @@
 
 <style>
   .skills {
-    margin-top: 5rem;
-    padding: 5rem 0;
+    padding: 4rem 0;
     background-color: var(--gray-900);
+    clip-path: polygon(100% 100%, 0% 100% , 0.00% 23.33%, 2.00% 23.24%, 4.00% 22.98%, 6.00% 22.55%, 8.00% 21.98%, 10.00% 21.27%, 12.00% 20.46%, 14.00% 19.58%, 16.00% 18.65%, 18.00% 17.71%, 20.00% 16.79%, 22.00% 15.92%, 24.00% 15.15%, 26.00% 14.48%, 28.00% 13.95%, 30.00% 13.58%, 32.00% 13.37%, 34.00% 13.34%, 36.00% 13.49%, 38.00% 13.81%, 40.00% 14.29%, 42.00% 14.91%, 44.00% 15.65%, 46.00% 16.49%, 48.00% 17.40%, 50.00% 18.33%, 52.00% 19.27%, 54.00% 20.17%, 56.00% 21.01%, 58.00% 21.76%, 60.00% 22.38%, 62.00% 22.86%, 64.00% 23.18%, 66.00% 23.32%, 68.00% 23.29%, 70.00% 23.09%, 72.00% 22.71%, 74.00% 22.19%, 76.00% 21.52%, 78.00% 20.74%, 80.00% 19.88%, 82.00% 18.96%, 84.00% 18.02%, 86.00% 17.09%, 88.00% 16.20%, 90.00% 15.39%, 92.00% 14.69%, 94.00% 14.11%, 96.00% 13.68%, 98.00% 13.42%, 100.00% 13.33%);
   }
 
   .skills-heading {
     text-align: center;
     color: var(--white);
+    margin-top: 25rem;
   }
 
   .skills-container {
-    margin-top: 3rem;
+    margin-top: 5rem;
+  }
+
+  .hard-skills {
+    flex-direction: column;
+  }
+
+  @media (min-width: 768px) {
+    .hard-skills {
+      flex-direction: row;
+    }
   }
 
   #head {
@@ -82,45 +93,33 @@
     background-color: var(--white);
     margin: 0 auto;
     font-family: monospace;
-    padding: auto;
-    float: none;
+    padding: .4rem;
     border-top-left-radius: 5px;
     border-top-right-radius: 5px;
+    display: flex;
+    align-items: center;
+    gap: 1rem;
   }
 
   #red {
     background-color: #e94b35;
     border-radius: 100%;
-    width: 15px;
-    height: 15px;
-    margin: 0 auto;
-    left: -47%;
-    bottom: -20%;
-    position: relative;
+    width: 16px;
+    height: 16px;
   }
 
   #yellow {
     background-color: #f0f000;
     border-radius: 100%;
-    width: 15px;
-    height: 15px;
-    margin: 0 auto;
-    left: -44%;
-    bottom: 40%;
-    position: relative;
-    display: block;
+    width: 16px;
+    height: 16px;
   }
 
   #green {
     background-color: #1aaf5c;
     border-radius: 100%;
-    width: 15px;
-    height: 15px;
-    margin: 0 auto;
-    left: -41%;
-    bottom: 99%;
-    position: relative;
-    display: block;
+    width: 16px;
+    height: 16px;
   }
 
   #screen {
