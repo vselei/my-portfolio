@@ -3,9 +3,8 @@ export const elementIsVisible = (el: string): Element | null => {
   container.style.overflowX = 'hidden';
   const containerRect = container.getBoundingClientRect();
   const containerTop = containerRect.top;
-  const containerBottom = containerRect.bottom;
 
-  return containerTop >= 0 && containerBottom <= window.innerHeight
+  return containerTop + 5 <= window.innerHeight
     ? container
     : null;
 };
