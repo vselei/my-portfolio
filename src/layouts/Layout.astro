@@ -145,24 +145,45 @@ const path = Astro.url.pathname;
     text-transform: uppercase;
   }
 
-  @keyframes appearFromLeft {
+  .hidden {
+    visibility: hidden;
+  }
+
+  .fromLeft {
+    position: relative;
+    animation-iteration-count: 1;
+    animation-name: fromLeft;
+    animation-duration: 2s;
+    animation-fill-mode: forwards;
+  }
+
+  .fromRight {
+    position: relative;
+    animation-iteration-count: 1;
+    animation-name: fromRight;
+    animation-duration: 1s;
+    animation-fill-mode: forwards;
+  }
+
+  @keyframes fromLeft {
     from {
       left: -100%;
     }
 
     to {
       left: 0;
+      visibility: visible;
     }
   }
 
-  
-  @keyframes appearFromRight {
+  @keyframes fromRight {
     from {
       left: 100%;
     }
 
     to {
       left: 0;
+      visibility: visible;
     }
   }
 </style>

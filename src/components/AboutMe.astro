@@ -2,11 +2,11 @@
 import programmerGif from '/img/programmer.gif';
 ---
 
-<section id="about" class="about container flex">
-  <div class="about-img flex-5">
+<section class="about container flex">
+  <div class="about-img hidden flex-5">
     <img width="450" height="300" src={programmerGif} />
   </div>
-  <div class="about-info flex-5 uppercase topic-text">
+  <div class="about-info hidden flex-5 uppercase topic-text">
     <h2 class="heading-one topic-heading">Um pouco sobre mim</h2>
     <p>
       Ingressei no mundo da tecnologia com apenas 12 anos de idade, tendo
@@ -31,9 +31,15 @@ import programmerGif from '/img/programmer.gif';
   </div>
 </section>
 <script>
-  const aboutContainerSection = document.querySelector('#about') as HTMLDivElement;
-  const aboutContainerSectionRect =
-    aboutContainerSection.getBoundingClientRect();
+  import { elementIsVisible } from '../helpers';
+
+  window.addEventListener('scroll', () => {
+    const aboutContainer = elementIsVisible('.about');
+    const abotuImg = aboutContainer?.querySelector('.about-img');
+    abotuImg?.classList.add('fromLeft');
+    const aboutInfo = aboutContainer?.querySelector('.about-info');
+    aboutInfo?.classList.add('fromRight');
+  });
 </script>
 
 <style>
