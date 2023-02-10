@@ -8,6 +8,12 @@ const Header = ({ path }) => {
   const [scroll, setScroll] = useState(0);
 
   useEffect(() => {
+    window.scrollTo({
+      top: 0
+    });
+  }, []);
+
+  useEffect(() => {
     const scrollDetect = () => {
       setScroll(window.scrollY);
     };
