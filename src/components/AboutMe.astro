@@ -2,7 +2,7 @@
 import programmerGif from '/img/programmer.gif';
 ---
 
-<section class="about container flex">
+<section id="about" class="about container flex">
   <div class="about-img flex-5">
     <img width="450" height="300" src={programmerGif} />
   </div>
@@ -30,6 +30,11 @@ import programmerGif from '/img/programmer.gif';
     </div>
   </div>
 </section>
+<script>
+  const aboutContainerSection = document.querySelector('#about') as HTMLDivElement;
+  const aboutContainerSectionRect =
+    aboutContainerSection.getBoundingClientRect();
+</script>
 
 <style>
   .about {
@@ -43,7 +48,7 @@ import programmerGif from '/img/programmer.gif';
   }
 
   .about-img img {
-    filter: opacity(.05);
+    filter: opacity(0.1);
     width: 100%;
     object-fit: contain;
   }

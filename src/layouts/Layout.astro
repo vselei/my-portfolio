@@ -144,4 +144,25 @@ const path = Astro.url.pathname;
   .uppercase {
     text-transform: uppercase;
   }
+
+  @keyframes appearFromLeft {
+    from {
+      left: -100%;
+    }
+
+    to {
+      left: 0;
+    }
+  }
+
+  
+  @keyframes appearFromRight {
+    from {
+      left: 100%;
+    }
+
+    to {
+      left: 0;
+    }
+  }
 </style>

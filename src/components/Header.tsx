@@ -4,7 +4,7 @@ import styles from '../styles/Header.module.css';
 
 import { useEffect, useState } from 'react';
 
-const Header = ({ path }) => {
+const Header = ({ path }: { path: string }) => {
   const [scroll, setScroll] = useState(0);
 
   useEffect(() => {
@@ -28,8 +28,9 @@ const Header = ({ path }) => {
   return (
     <header
       style={{
-        background: scroll > 1 && 'linear-gradient(to left, #d7d7d7, #f5f5f5)',
-        boxShadow: scroll > 1 && '1px 1px 5px #d7d7d77f'
+        background:
+          scroll > 1 ? 'linear-gradient(to left, #d7d7d7, #f5f5f5)' : '',
+        boxShadow: scroll > 1 ? '1px 1px 5px #d7d7d77f' : ''
       }}
     >
       <div className="container flex space-between align-center">
