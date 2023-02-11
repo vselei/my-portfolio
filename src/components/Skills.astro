@@ -40,7 +40,7 @@
             <p>PostgreSQL</p>
             <p>Strapi</p>
             <p>Cloudinary</p>
-            <p>Deploy</p>
+            <p>Deploy<span class="cursor"></span></p>
           </samp>
           <p></p>
         </div>
@@ -138,5 +138,28 @@
     font-size: 15px;
     text-align: left;
     position: static;
+  }
+
+  .cursor {
+    display: inline-block;
+    background-color: #fff;
+    width: 5px;
+    height: 15px;
+    margin-left: .4rem;
+    vertical-align: bottom;
+    animation-name: blinkCursor;
+    animation-duration: .5s;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+  }
+
+  @keyframes blinkCursor {
+    from {
+      opacity: 0;
+    }
+
+    to {
+      opacity: 1;
+    }
   }
 </style>
