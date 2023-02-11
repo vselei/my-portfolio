@@ -8,7 +8,12 @@ const { title, image } = Astro.props;
 ---
 
 <div class="card">
-  <img width={60} height={60} src={`/img/${image}`} alt={`Soft skill de ${title}`} />
+  <img
+    width={60}
+    height={60}
+    src={`/img/${image}`}
+    alt={`Soft skill de ${title}`}
+  />
   <h3 class="card-title uppercase">{title}</h3>
 </div>
 
@@ -24,5 +29,10 @@ const { title, image } = Astro.props;
     align-items: center;
     gap: 1.4rem;
     border-radius: 1rem;
+    transition: 300ms;
+  }
+
+  .card:hover {
+    transform: rotate3d(1, 1, 0, 20deg) scale(1.1);
   }
 </style>
