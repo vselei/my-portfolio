@@ -1,10 +1,28 @@
 ---
-import Slides from "./Slides";
+import Slides from './Slides';
+
+const projects: Array<{ title: string; content: string }> = [
+  {
+    title: 'Project 1',
+    content:
+      'Lorem, ipsum dolor sit amet consectetur adipisicing elit. Exercitationem, inventore nemo vel consectetur reprehenderit atque quam accusamus repellat recusandae doloribus asperiores laboriosam, nostrum quaerat quia quos? Impedit laborum temporibus aliquam?'
+  },
+  {
+    title: 'Project 2',
+    content:
+      'Lorem, ipsum dolor sit amet consectetur adipisicing elit. Exercitationem, inventore nemo vel consectetur reprehenderit atque quam accusamus repellat recusandae doloribus asperiores laboriosam, nostrum quaerat quia quos? Impedit laborum temporibus aliquam?'
+  },
+  {
+    title: 'Project 3',
+    content:
+      'Lorem, ipsum dolor sit amet consectetur adipisicing elit. Exercitationem, inventore nemo vel consectetur reprehenderit atque quam accusamus repellat recusandae doloribus asperiores laboriosam, nostrum quaerat quia quos? Impedit laborum temporibus aliquam?'
+  }
+];
 ---
 
 <section class="projects container">
   <h2 class="heading-one topic-heading">Meus projetos</h2>
-  <Slides client:only />
+  <Slides client:only projects={projects} />
 </section>
 
 <style>

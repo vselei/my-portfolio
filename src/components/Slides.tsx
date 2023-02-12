@@ -1,22 +1,34 @@
 import { Swiper, SwiperSlide } from 'swiper/react';
+import { Pagination, Navigation } from 'swiper';
 
 import 'swiper/css';
 import 'swiper/css/pagination';
 import 'swiper/css/navigation';
 
-import '../styles/Slides.css';
+import Slide from './Slide';
 
-import { Pagination, Navigation } from 'swiper';
-
-const Slides = () => {
+const Slides = ({
+  projects
+}: {
+  projects: Array<{ title: string; content: string }>;
+}) => {
   return (
     <Swiper
+      slidesPerView={1}
+      spaceBetween={30}
+      loop={true}
       pagination={{
-        type: 'bullets'
+        clickable: true
       }}
       navigation={true}
       modules={[Pagination, Navigation]}
-    ></Swiper>
+    >
+      {projects.map(p => (
+        <SwiperSlide>
+          <Slide title={p.title} content={p.content} />
+        </SwiperSlide>
+      ))}
+    </Swiper>
   );
 };
 
