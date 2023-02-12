@@ -66,6 +66,14 @@ const Header = ({ path }: { path: string }) => {
                 Projetos
               </a>
             </li>
+            <li>
+              <a
+                href="/contact"
+                className={path === '/contact' ? styles.active : ''}
+              >
+                Contato
+              </a>
+            </li>
           </ul>
         </nav>
       </div>
