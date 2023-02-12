@@ -27,11 +27,6 @@ const Slides = ({
       }}
       slidesPerView={1}
       spaceBetween={25}
-      loop={true}
-      pagination={{
-        clickable: true,
-        dynamicBullets: true
-      }}
       navigation={true}
       modules={[Pagination, Navigation]}
     >
