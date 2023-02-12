@@ -11,12 +11,10 @@ const Slide = ({
 }) => {
   return (
     <>
-      <video
-        src={`/videos/${src}`}
-        autoPlay
-        muted
-        className={styles.video}
-      ></video>
+      <div className={styles.imgContainer}>
+        <div className={styles.overlay}></div>
+        <img src={`/slides/${src}`} alt={`Projeto ${title}`} />
+      </div>
       <div className={styles.slideContent}>
         <h2>{title}</h2>
         <p>{content}</p>
