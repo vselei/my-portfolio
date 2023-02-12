@@ -13,7 +13,7 @@ const Slide = ({
     <>
       <div className={styles.imgContainer}>
         <div className={styles.overlay}></div>
-        <img src={`/slides/${src}`} alt={`Projeto ${title}`} />
+        <img loading='lazy' src={`/slides/${src}`} alt={`Projeto ${title}`} />
       </div>
       <div className={styles.slideContent}>
         <h2>{title}</h2>

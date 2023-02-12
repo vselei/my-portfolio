@@ -9,6 +9,7 @@ const { title, image } = Astro.props;
 
 <div class="card">
   <img
+    loading="lazy"
     width={60}
     height={60}
     src={`/img/${image}`}
