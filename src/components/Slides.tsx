@@ -10,22 +10,34 @@ import Slide from './Slide';
 const Slides = ({
   projects
 }: {
-  projects: Array<{ title: string; content: string }>;
+  projects: Array<{ title: string; content: string; src: string }>;
 }) => {
   return (
     <Swiper
+      breakpoints={{
+        640: {
+          slidesPerView: 2
+        },
+        768: {
+          slidesPerView: 3
+        },
+        1024: {
+          slidesPerView: 4
+        }
+      }}
       slidesPerView={1}
-      spaceBetween={30}
+      spaceBetween={25}
       loop={true}
       pagination={{
-        clickable: true
+        clickable: true,
+        dynamicBullets: true
       }}
       navigation={true}
       modules={[Pagination, Navigation]}
     >
       {projects.map(p => (
-        <SwiperSlide>
-          <Slide title={p.title} content={p.content} />
+        <SwiperSlide key={p.title}>
+          <Slide title={p.title} content={p.content} src={p.src} />
         </SwiperSlide>
       ))}
     </Swiper>
