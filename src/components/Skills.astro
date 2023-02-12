@@ -81,6 +81,12 @@ const cards: Array<{ title: string; image: string }> = [
           <p>React Bootstrap</p>
           <p>Bootstrap</p>
           <p>Tailwind CSS</p>
+          <p>Node.js</p>
+          <p>Express.js</p>
+          <p>APIs</p>
+          <p>MVC</p>
+          <p>MongoDB</p>
+          <p>Mongoose</p>
           <p>Prisma</p>
           <p>MySQL</p>
           <p>PostgreSQL</p>
@@ -202,7 +208,7 @@ const cards: Array<{ title: string; image: string }> = [
 
   .skills-container {
     margin-top: 5rem;
-    gap: 4rem;
+    gap: 2rem;
     flex-direction: column;
   }
 
@@ -318,11 +324,12 @@ const cards: Array<{ title: string; image: string }> = [
   #screen {
     background-color: var(--gray-500);
     width: 100%;
-    min-height: 450px;
+    max-height: 520px;
     border-bottom-right-radius: 2%;
     border-bottom-left-radius: 2%;
     margin: 0 auto;
     padding: 1rem;
+    overflow-y: scroll;
   }
 
   .font {

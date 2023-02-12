@@ -55,6 +55,18 @@ const path = Astro.url.pathname;
     box-sizing: inherit;
   }
 
+  *::-webkit-scrollbar {
+    width: 5px;
+  }
+
+  *::-webkit-scrollbar-track {
+    background: var(--white);
+  }
+
+  *::-webkit-scrollbar-thumb {
+    background-color: rgb(23, 23, 23, .5);
+  }
+
   li {
     list-style-type: none;
   }
