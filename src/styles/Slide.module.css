@@ -2,8 +2,8 @@
   border-radius: 1rem;
   overflow: hidden;
   position: relative;
+  height: 100%;
   width: 100%;
-  height: 150px;
 }
 
 .overlay {
@@ -12,7 +12,8 @@
   left: 0;
   width: 100%;
   height: 100%;
-  background-color: rgba( 0 0 0 / .8);
+  background-color: rgba( 0 0 0 / .6);
+  box-shadow: inset 0 -2px 1px var(--white);
 }
 
 .videoContainer video {

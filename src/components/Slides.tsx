@@ -29,6 +29,7 @@ const Slides = ({
       slidesPerView={1}
       spaceBetween={25}
       navigation={true}
+      loop={true}
       modules={[Pagination, Navigation]}
     >
       {projects.map(p => (
