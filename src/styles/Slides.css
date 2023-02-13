@@ -11,5 +11,19 @@
 
 .swiper-button-prev,
 .swiper-button-next {
-  color: var(--white);
+  color: var(--gray-900);
+  animation-name: changeColors;
+  animation-duration: 1s;
+  animation-iteration-count: infinite;
+  animation-direction: alternate;
+}
+
+@keyframes changeColors {
+  from {
+    color: var(--gray-900);
+  }
+
+  to {
+    color: var(--white);
+  }
 }
