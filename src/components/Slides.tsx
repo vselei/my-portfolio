@@ -11,7 +11,7 @@ import '../styles/Slides.css';
 const Slides = ({
   projects
 }: {
-  projects: Array<{ title: string; content: string; src: string }>;
+  projects: Array<{ title: string; content: string; src: string; github: string; link?: string; }>;
 }) => {
   return (
     <Swiper
@@ -34,7 +34,7 @@ const Slides = ({
     >
       {projects.map(p => (
         <SwiperSlide key={p.title}>
-          <Slide title={p.title} content={p.content} src={p.src} />
+          <Slide title={p.title} content={p.content} src={p.src} github={p.github} link={p.link} />
         </SwiperSlide>
       ))}
     </Swiper>
