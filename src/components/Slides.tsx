@@ -6,6 +6,7 @@ import 'swiper/css/pagination';
 import 'swiper/css/navigation';
 
 import Slide from './Slide';
+import '../styles/Slides.css';
 
 const Slides = ({
   projects
