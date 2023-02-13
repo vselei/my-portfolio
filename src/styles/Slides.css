@@ -2,3 +2,16 @@
 .swiper-button-next {
   color: var(--white);
 }
+
+.swiper-slide {
+  min-height: 35rem;
+  border-radius: 1rem;
+  overflow: hidden;
+  box-shadow: 1px 1px 5px rgb(23, 23, 23, .1);
+  transition: 300ms;
+}
+
+.swiper-slide:hover {
+  transform: scale(.95);
+  cursor: pointer;
+}
