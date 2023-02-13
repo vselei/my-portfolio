@@ -4,12 +4,14 @@ const Slide = ({
   title,
   content,
   src,
-  github
+  github,
+  link
 }: {
   title: string;
   content: string;
   src: string;
   github: string;
+  link?: string;
 }) => {
   return (
     <>
@@ -28,6 +30,7 @@ const Slide = ({
           <a href={`https://github.com/vselei/${github}`} target="_blank">
             GitHub
           </a>
+          {link && <a href={link} target="_blank">Visitar</a>}
         </div>
       </div>
     </>
