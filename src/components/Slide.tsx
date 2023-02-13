@@ -11,9 +11,9 @@ const Slide = ({
 }) => {
   return (
     <>
-      <div className={styles.imgContainer}>
+      <div className={styles.videoContainer}>
         <div className={styles.overlay}></div>
-        <video preload="none" src={`/videos/${src}`}>
+        <video preload="none" src={`/videos/${src}`} autoPlay muted>
           <p>Seu navegador não suporta vídeos HTML</p>
         </video>
       </div>

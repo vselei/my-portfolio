@@ -1,8 +1,9 @@
-.imgContainer {
+.videoContainer {
   border-radius: 1rem;
   overflow: hidden;
   position: relative;
-  height: 180px;
+  width: 100%;
+  height: 150px;
 }
 
 .overlay {
@@ -11,9 +12,10 @@
   left: 0;
   width: 100%;
   height: 100%;
+  background-color: rgba( 0 0 0 / .8);
 }
 
-.imgContainer img {
+.videoContainer video {
   width: 100%;
   height: 100%;
 }
