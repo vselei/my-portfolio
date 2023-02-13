@@ -1,7 +1,5 @@
 .videoContainer {
   position: relative;
-  height: 100%;
-  width: 100%;
 }
 
 .overlay {
@@ -21,9 +19,13 @@
 
 .slideContent {
   padding: 1.5rem;
+  min-height: 15rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
 }
 
-.slideContent h2 {
+.content h2 {
   color: var(--gray-900);
   text-transform: uppercase;
   letter-spacing: 1px;
@@ -31,10 +33,27 @@
   font-weight: 900;
 }
 
-.slideContent p {
+.content p {
   margin-top: .5rem;
   color: var(--gray-200);
   text-transform: uppercase;
   font-size: 1.2rem;
   line-height: 1.3;
+}
+
+.actions {
+  margin-top: 1rem;
+}
+
+.actions a {
+  display: block;
+  background-color: #010409;
+  color: var(--white);
+  width: fit-content;
+  padding: 1rem 2rem;
+  text-transform: uppercase;
+  font-size: 1.2rem;
+  letter-spacing: 1px;
+  font-weight: 900;
+  border-radius: .5rem;
 }
