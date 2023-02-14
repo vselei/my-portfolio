@@ -178,6 +178,23 @@ const path = Astro.url.pathname;
     animation-fill-mode: forwards;
   }
 
+  .opacity {
+    animation-name: isVisible;
+    animation-duration: 2s;
+    animation-fill-mode: forwards;
+    animation-iteration-count: 1;
+  }
+
+  @keyframes isVisible {
+    from {
+      opacity: 0;
+    }
+
+    to {
+      opacity: 1;
+    }
+  }
+
   @keyframes fromLeft {
     from {
       left: -100%;
