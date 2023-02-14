@@ -1,3 +1,7 @@
+.swiper {
+  visibility: hidden;
+}
+
 .swiper-slide {
   min-height: 30rem;
   border-radius: 1rem;

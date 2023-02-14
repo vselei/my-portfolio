@@ -7,14 +7,27 @@ import projects from '../data/projects';
   <h2 class="heading-one topic-heading">Meus projetos</h2>
   <Slides client:only projects={projects} />
 </section>
+<script>
+  import { elementIsVisible } from '../helpers';
+
+  window.addEventListener('scroll', () => {
+    const projectsHeading = elementIsVisible('.projects h2');
+    projectsHeading?.classList.add('fromLeft');
+    const slides = elementIsVisible('.projects .swiper');
+    slides?.classList.add('fromRight');
+  });
+</script>
 
 <style>
   .projects {
     padding: 8rem 0;
+    overflow: hidden;
   }
 
   .topic-heading {
     text-align: center;
     margin-bottom: 5rem;
+    visibility: hidden;
+    overflow-y: hidden;
   }
 </style>
