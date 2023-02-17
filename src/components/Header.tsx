@@ -5,6 +5,9 @@ import styles from '../styles/Header.module.css';
 import { useEffect, useState } from 'react';
 
 const Header = ({ path }: { path: string }) => {
+  const [menuIsVisible, setMenuIsVisible] = useState(
+    window.innerWidth > 768 ? true : false
+  );
   const [scroll, setScroll] = useState(0);
 
   useEffect(() => {
@@ -36,50 +39,56 @@ const Header = ({ path }: { path: string }) => {
       <div className="container flex space-between align-center">
         <ProfileImg />
         <nav className={styles.menu}>
-          <button className={styles.hamburger} type='button'>
+          <button
+            onClick={() => setMenuIsVisible(!menuIsVisible)}
+            className={styles.hamburger}
+            type="button"
+          >
             <div></div>
             <div></div>
             <div></div>
           </button>
-          <ul className='flex'>
-            <li>
-              <a href="/" className={path === '/' ? styles.active : ''}>
-                Home
-              </a>
-            </li>
-            <li>
-              <a
-                href="/about-me"
-                className={path === '/about-me' ? styles.active : ''}
-              >
-                Sobre Mim
-              </a>
-            </li>
-            <li>
-              <a
-                href="/skills"
-                className={path === '/skills' ? styles.active : ''}
-              >
-                Habilidades
-              </a>
-            </li>
-            <li>
-              <a
-                href="/projects"
-                className={path === '/projects' ? styles.active : ''}
-              >
-                Projetos
-              </a>
-            </li>
-            <li>
-              <a
-                href="/contact"
-                className={path === '/contact' ? styles.active : ''}
-              >
-                Contato
-              </a>
-            </li>
-          </ul>
+          {menuIsVisible && (
+            <ul className='flex'>
+              <li>
+                <a href="/" className={path === '/' ? styles.active : ''}>
+                  Home
+                </a>
+              </li>
+              <li>
+                <a
+                  href="/about-me"
+                  className={path === '/about-me' ? styles.active : ''}
+                >
+                  Sobre Mim
+                </a>
+              </li>
+              <li>
+                <a
+                  href="/skills"
+                  className={path === '/skills' ? styles.active : ''}
+                >
+                  Habilidades
+                </a>
+              </li>
+              <li>
+                <a
+                  href="/projects"
+                  className={path === '/projects' ? styles.active : ''}
+                >
+                  Projetos
+                </a>
+              </li>
+              <li>
+                <a
+                  href="/contact"
+                  className={path === '/contact' ? styles.active : ''}
+                >
+                  Contato
+                </a>
+              </li>
+            </ul>
+          )}
         </nav>
       </div>
     </header>
