@@ -36,7 +36,12 @@ const Header = ({ path }: { path: string }) => {
       <div className="container flex space-between align-center">
         <ProfileImg />
         <nav className={styles.menu}>
-          <ul className={`${styles.desktop} flex`}>
+          <button className={styles.hamburger} type='button'>
+            <div></div>
+            <div></div>
+            <div></div>
+          </button>
+          <ul className='flex'>
             <li>
               <a href="/" className={path === '/' ? styles.active : ''}>
                 Home
