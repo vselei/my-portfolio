@@ -48,47 +48,51 @@ const Header = ({ path }: { path: string }) => {
             <div></div>
             <div></div>
           </button>
-          {menuIsVisible && (
-            <ul className='flex'>
-              <li>
-                <a href="/" className={path === '/' ? styles.active : ''}>
-                  Home
-                </a>
-              </li>
-              <li>
-                <a
-                  href="/about-me"
-                  className={path === '/about-me' ? styles.active : ''}
-                >
-                  Sobre Mim
-                </a>
-              </li>
-              <li>
-                <a
-                  href="/skills"
-                  className={path === '/skills' ? styles.active : ''}
-                >
-                  Habilidades
-                </a>
-              </li>
-              <li>
-                <a
-                  href="/projects"
-                  className={path === '/projects' ? styles.active : ''}
-                >
-                  Projetos
-                </a>
-              </li>
-              <li>
-                <a
-                  href="/contact"
-                  className={path === '/contact' ? styles.active : ''}
-                >
-                  Contato
-                </a>
-              </li>
-            </ul>
-          )}
+
+          <ul
+            style={{
+              opacity: menuIsVisible ? 1 : 0
+            }}
+            className="flex"
+          >
+            <li>
+              <a href="/" className={path === '/' ? styles.active : ''}>
+                Home
+              </a>
+            </li>
+            <li>
+              <a
+                href="/about-me"
+                className={path === '/about-me' ? styles.active : ''}
+              >
+                Sobre Mim
+              </a>
+            </li>
+            <li>
+              <a
+                href="/skills"
+                className={path === '/skills' ? styles.active : ''}
+              >
+                Habilidades
+              </a>
+            </li>
+            <li>
+              <a
+                href="/projects"
+                className={path === '/projects' ? styles.active : ''}
+              >
+                Projetos
+              </a>
+            </li>
+            <li>
+              <a
+                href="/contact"
+                className={path === '/contact' ? styles.active : ''}
+              >
+                Contato
+              </a>
+            </li>
+          </ul>
         </nav>
       </div>
     </header>
