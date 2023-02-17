@@ -41,7 +41,7 @@ const Header = ({ path }: { path: string }) => {
         <nav className={styles.menu}>
           <button
             onClick={() => setMenuIsVisible(!menuIsVisible)}
-            className={styles.hamburger}
+            className={!menuIsVisible ? styles.hamburger : styles.cross}
             type="button"
           >
             <div></div>
