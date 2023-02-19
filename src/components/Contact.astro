@@ -1,0 +1,110 @@
+<section class="contact container">
+  <h2 class="contact-heading topic-heading uppercase">Contato</h2>
+  <form method="post" novalidate>
+    <div class="form-control">
+      <label for="name">Nome</label>
+      <input
+        type="text"
+        placeholder="Digite seu nome completo"
+        id="name"
+        name="name"
+        required
+      />
+    </div>
+    <div class="form-control">
+      <label for="email">Email</label>
+      <input
+        type="email"
+        placeholder="Digite seu email"
+        id="email"
+        name="email"
+        required
+      />
+    </div>
+    <div class="form-control">
+      <label for="message">Mensagem</label>
+      <textarea
+        placeholder="Digite seu nome completo"
+        id="message"
+        name="message"
+        required></textarea>
+    </div>
+    <div class="form-actions flex justify-center align-center">
+      <button class="cta uppercase" type="submit">Enviar mensagem</button>
+      ou
+      <a href="#" class="cta wpp-btn">WhatsApp</a>
+    </div>
+  </form>
+</section>
+
+<style>
+  .contact {
+    max-width: 768px;
+    padding-bottom: 8rem;
+  }
+
+  .contact h2 {
+    text-align: center;
+    color: var(--gray-900);
+  }
+
+  .contact form {
+    margin-top: 4rem;
+  }
+
+  .form-control {
+    display: flex;
+    flex-direction: column;
+    gap: 0.8rem;
+    margin-bottom: 3rem;
+  }
+
+  .form-control label {
+    color: var(--gray-900);
+    font-size: 1.4rem;
+    text-transform: uppercase;
+    font-weight: 600;
+  }
+
+  .form-control input,
+  .form-control textarea {
+    padding: 1.5rem 1rem;
+    font-size: 1.2rem;
+    text-transform: uppercase;
+    border-radius: 1rem;
+    box-shadow: 1px 1px 5px #adadad34;
+    border-bottom: 1px solid transparent;
+    transition: 300ms;
+  }
+
+  .form-control input:focus,
+  .form-control textarea:focus {
+    border-bottom-color: #49494949;
+  }
+
+  .form-actions {
+    margin-top: 4rem;
+    text-transform: uppercase;
+    gap: 2rem;
+    flex-direction: column;
+  }
+
+  @media (min-width: 768px) {
+    .form-actions{
+      flex-direction: row;
+    }
+  }
+
+  .form-actions button {
+    cursor: pointer;
+  }
+
+  a.wpp-btn {
+    background-color: #25d366;
+    border: 1px solid #25d366;
+  }
+
+  a.wpp-btn:hover {
+    color: #25d366;
+  }
+</style>
