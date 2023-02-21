@@ -16,12 +16,12 @@ let showAlert = false;
       />
     </div>
     <div class="form-control">
-      <label for="email">Email</label>
+      <label for="subject">Assunto</label>
       <input
-        type="email"
-        placeholder="Digite seu email"
-        id="email"
-        name="email"
+        type="text"
+        placeholder="Digite o assunto"
+        id="subject"
+        name="subject"
         required
       />
     </div>
@@ -68,27 +68,24 @@ let showAlert = false;
   contactForm.addEventListener('submit', e => {
     e.preventDefault();
 
-    const [name, email, message] = [
+    const [name, subject, message] = [
       document.querySelector('#name') as HTMLInputElement,
-      document.querySelector('#email') as HTMLInputElement,
+      document.querySelector('#subject') as HTMLInputElement,
       document.querySelector('#message') as HTMLInputElement
     ];
 
     if (
       name?.value?.trim() === '' ||
-      email?.value?.trim() === '' ||
+      subject?.value?.trim() === '' ||
       message?.value?.trim() === ''
     ) {
       showAlert('Todos os campos são obrigatórios');
       return;
     }
 
-    if (email?.value.startsWith('@') || !email?.value.includes('@')) {
-      showAlert('Formato de e-mail incorreto');
-      return;
-    }
-
     showAlert('Seu sistema de envio de email foi aberto');
+    location.href = `mailto:vsennaselei@gmail.com?subject=${subject?.value}&body=${message?.value}%0D%0DAtenciosamente, ${name?.value}
+    `;
   });
 </script>
 
