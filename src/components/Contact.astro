@@ -79,10 +79,10 @@ let showAlert = false;
 
     if (!email?.value.includes('@')) {
       showAlert('Formato de e-mail incorreto', true);
-      return
+      return;
     }
 
-    showAlert('Mensagem enviada com sucesso', false);
+    showAlert('Seu sistema de envio de email foi aberto', false);
   });
 </script>
 
