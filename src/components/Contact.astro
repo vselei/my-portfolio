@@ -1,6 +1,10 @@
+---
+let showAlert = false;
+---
+
 <section class="contact container">
   <h2 class="contact-heading topic-heading uppercase">Contato</h2>
-  <form method="post" novalidate>
+  <form id="contact-form" method="post" novalidate>
     <div class="form-control">
       <label for="name">Nome</label>
       <input
@@ -36,6 +40,46 @@
     </div>
   </form>
 </section>
+<script>
+  const contactForm = document.querySelector(
+    '#contact-form'
+  ) as HTMLFormElement;
+
+  const showAlert = (msg: string, error: boolean): HTMLParagraphElement => {
+    if (contactForm?.firstElementChild?.tagName === 'P') {
+      contactForm.removeChild(contactForm.firstElementChild);
+    }
+    const p = document.createElement('p');
+    p.textContent = msg;
+    p.classList.add('alert');
+    contactForm.insertAdjacentElement('afterbegin', p);
+    if (error) {
+      p.classList.add('error');
+    }
+    return p;
+  };
+
+  contactForm.addEventListener('submit', e => {
+    e.preventDefault();
+
+    const [name, email, message] = [
+      document.querySelector('#name') as HTMLInputElement,
+      document.querySelector('#email') as HTMLInputElement,
+      document.querySelector('#message') as HTMLInputElement
+    ];
+
+    if (
+      name?.value?.trim() === '' ||
+      email?.value?.trim() === '' ||
+      message?.value?.trim() === ''
+    ) {
+      showAlert('Todos os campos são obrigatórios', true);
+      return;
+    }
+
+    showAlert('Mensagem enviada com sucesso', false);
+  });
+</script>
 
 <style>
   .contact {
@@ -90,7 +134,7 @@
   }
 
   @media (min-width: 768px) {
-    .form-actions{
+    .form-actions {
       flex-direction: row;
     }
   }
