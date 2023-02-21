@@ -83,7 +83,7 @@ let showAlert = false;
       return;
     }
 
-    if (!email?.value.includes('@')) {
+    if (email?.value.startsWith('@') || !email?.value.includes('@')) {
       showAlert('Formato de e-mail incorreto');
       return;
     }
