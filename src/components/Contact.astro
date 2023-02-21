@@ -62,6 +62,11 @@ let showAlert = false;
     p.style.borderRadius = '1rem';
     p.style.fontSize = '1.3rem';
     contactForm.insertAdjacentElement('afterbegin', p);
+    setTimeout(() => {
+      if (contactForm?.firstElementChild?.tagName === 'P') {
+        contactForm.removeChild(contactForm.firstElementChild);
+      }
+    }, 3000);
     return p;
   };
 
