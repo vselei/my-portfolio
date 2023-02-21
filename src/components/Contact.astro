@@ -77,6 +77,11 @@ let showAlert = false;
       return;
     }
 
+    if (!email?.value.includes('@')) {
+      showAlert('Formato de e-mail incorreto', true);
+      return
+    }
+
     showAlert('Mensagem enviada com sucesso', false);
   });
 </script>
