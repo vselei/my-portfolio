@@ -41,34 +41,13 @@ let showAlert = false;
   </form>
 </section>
 <script>
+  import { showAlert } from '../helpers';
+
   const contactForm = document.querySelector(
     '#contact-form'
   ) as HTMLFormElement;
 
-  const showAlert = (msg: string): HTMLParagraphElement => {
-    if (contactForm?.firstElementChild?.tagName === 'P') {
-      contactForm.removeChild(contactForm.firstElementChild);
-    }
-    const p = document.createElement('p');
-    p.textContent = msg;
-    p.style.backgroundColor = 'var(--gray-900)';
-    p.style.padding = '2rem';
-    p.style.width = '100%';
-    p.style.maxWidth = '40rem';
-    p.style.margin = '0 auto 3rem auto';
-    p.style.color = 'var(--white)';
-    p.style.textAlign = 'center';
-    p.style.textTransform = 'uppercase';
-    p.style.borderRadius = '1rem';
-    p.style.fontSize = '1.3rem';
-    contactForm.insertAdjacentElement('afterbegin', p);
-    setTimeout(() => {
-      if (contactForm?.firstElementChild?.tagName === 'P') {
-        contactForm.removeChild(contactForm.firstElementChild);
-      }
-    }, 3000);
-    return p;
-  };
+  const showMessage = showAlert(contactForm);
 
   contactForm.addEventListener('submit', e => {
     e.preventDefault();
@@ -84,11 +63,11 @@ let showAlert = false;
       subject?.value?.trim() === '' ||
       message?.value?.trim() === ''
     ) {
-      showAlert('Todos os campos são obrigatórios');
+      showMessage('Todos os campos são obrigatórios');
       return;
     }
 
-    showAlert('Seu sistema de envio de email foi aberto');
+    showMessage('Seu sistema de envio de email foi aberto');
     location.href = `mailto:vsennaselei@gmail.com?subject=${subject?.value}&body=${message?.value}%0D%0DAtenciosamente, ${name?.value}
     `;
   });
