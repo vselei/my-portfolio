@@ -41,7 +41,7 @@ let showAlert = false;
   </form>
 </section>
 <script>
-  import { showAlert } from '../helpers';
+  import { showAlert, elementIsVisible } from '../helpers';
 
   const contactForm = document.querySelector(
     '#contact-form'
@@ -71,6 +71,13 @@ let showAlert = false;
     location.href = `mailto:vsennaselei@gmail.com?subject=${subject?.value}&body=${message?.value}%0D%0DAtenciosamente, ${name?.value}
     `;
   });
+
+  window.addEventListener('scroll', () => {
+    const contactHeading = elementIsVisible('.contact h2');
+    contactHeading?.classList.add('fromRight');
+    const contactForm = elementIsVisible('.contact form');
+    contactForm?.classList.add('fromLeft');
+  });
 </script>
 
 <style>
@@ -82,6 +89,7 @@ let showAlert = false;
   .contact h2 {
     text-align: center;
     color: var(--gray-900);
+    overflow: hidden;
   }
 
   .contact form {
