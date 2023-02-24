@@ -47,3 +47,12 @@ a.wppBtn:hover {
 .highlight {
   font-weight: 900;
 }
+
+.social a {
+  flex-direction: column;
+  text-align: center;
+}
+
+.social a span {
+  margin-top: .4rem;
+}
