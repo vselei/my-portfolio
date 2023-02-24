@@ -10,7 +10,7 @@ const Footer = () => {
   }, []);
 
   return (
-    <footer className={styles.footer}>
+    <>
       <div className={styles.footerInfo}>
         <div
           className={`${styles.footerContainer} container flex space-between`}
@@ -98,7 +98,7 @@ const Footer = () => {
       <small className={styles.copy}>
         &copy; {year} Victor Seleimend, todos os direitos reservados
       </small>
-    </footer>
+    </>
   );
 };
 

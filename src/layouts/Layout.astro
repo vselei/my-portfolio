@@ -23,7 +23,9 @@ const path = Astro.url.pathname;
     <Header path={path} client:only />
     <div class="move">
       <slot />
-      <Footer client:only />
+      <footer class="footer">
+        <Footer client:only />
+      </footer>
     </div>
   </body>
 </html>
@@ -128,6 +130,10 @@ const path = Astro.url.pathname;
     max-width: 1280px;
     width: 90%;
     margin: 0 auto;
+  }
+
+  .footer {
+    margin-top: 10rem;
   }
 
   .flex {
