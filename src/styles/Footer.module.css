@@ -10,12 +10,24 @@
   border-top-left-radius: 4rem;
 }
 
-.footerAbout {
-  width: 33.333%;
+.footerContainer {
+  flex-direction: column;
+  gap: 6rem;
 }
 
 .footerAbout p {
   font-size: 1.2rem;
+}
+
+@media (min-width: 768px) {
+  .footerContainer {
+    flex-direction: row;
+    gap: 3rem;
+  }
+
+  .footerAbout{
+    width: 33%;
+  }
 }
 
 .cvBtn {

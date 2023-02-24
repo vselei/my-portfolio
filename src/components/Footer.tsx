@@ -12,7 +12,7 @@ const Footer = () => {
   return (
     <footer className={styles.footer}>
       <div className={styles.footerInfo}>
-        <div className="container flex space-between">
+        <div className={`${styles.footerContainer} container flex space-between`}>
           <div className={styles.footerAbout}>
             <h2 className="heading-two uppercase">Victor Seleimend</h2>
             <p className="uppercase">
@@ -50,7 +50,7 @@ const Footer = () => {
           </address>
           <div className={styles.social}>
             <h2 className="heading-two uppercase">Redes Sociais</h2>
-            <div className="flex gap-1-2 justify-center">
+            <div className="flex gap-1-2">
               <a
                 target="_blank"
                 className="uppercase flex align-center"
