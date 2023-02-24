@@ -13,8 +13,24 @@ const Footer = () => {
     <footer className={styles.footer}>
       <div className={styles.footerInfo}>
         <div className="container flex space-between">
-          <address className={styles.footerContent}>
+          <div className={styles.footerAbout}>
             <h2 className="heading-two uppercase">Victor Seleimend</h2>
+            <p className="uppercase">
+              Sou um programador focado e autodidata, sempre procurando me
+              aprimorar mais e mais ao longo do tempo. Desde os meus 12 anos
+              venho estudando mais e mais esse mundo tão denso que é o da
+              tecnologia.
+            </p>
+            <a
+              href="/pdf/curriculo.pdf"
+              download="curriculo-victor"
+              className={`${styles.cvBtn} cta uppercase`}
+            >
+              Baixar Currículo
+            </a>
+          </div>
+          <address className={styles.footerContent}>
+            <h2 className="heading-two uppercase">Contato</h2>
             <p className="uppercase">
               <span className={styles.highlight}>Email: </span>
               <a href="mailto:vsennaselei@gmail.com">vsennaselei@gmail.com</a>
