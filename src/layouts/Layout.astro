@@ -29,6 +29,15 @@ const path = Astro.url.pathname;
     </div>
   </body>
 </html>
+<script>
+  import { elementIsVisible } from '../helpers';
+
+  window.addEventListener('scroll', () => {
+    const foortInfo = elementIsVisible('.footer');
+    foortInfo?.classList.add('opacity');
+  });
+</script>
+
 <style is:global>
   @import url('https://necolas.github.io/normalize.css/8.0.1/normalize.css');
   @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@500;700&display=swap');
@@ -192,7 +201,7 @@ const path = Astro.url.pathname;
 
   .opacity {
     animation-name: isVisible;
-    animation-duration: 2s;
+    animation-duration: 1s;
     animation-fill-mode: forwards;
     animation-iteration-count: 1;
   }
