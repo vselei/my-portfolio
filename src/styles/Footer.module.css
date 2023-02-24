@@ -1,5 +1,5 @@
 .footer {
-  margin-top: 8rem;
+  margin-top: 10rem;
 }
 
 .footerInfo {
@@ -23,6 +23,15 @@
   text-decoration: solid;
 }
 
+.footerContent {
+  font-style: normal;
+  font-size: 1.4rem;
+}
+
+.footerContent p {
+  margin-bottom: 0.5rem;
+}
+
 a.wppBtn {
   display: inline-block;
   border-radius: 4rem;
@@ -33,15 +42,6 @@ a.wppBtn {
 
 a.wppBtn:hover {
   color: #25d366;
-}
-
-.footerContent {
-  font-style: normal;
-  font-size: 1.4rem;
-}
-
-.footerContent p {
-  margin-bottom: .5rem;
 }
 
 .highlight {
