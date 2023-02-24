@@ -11,33 +11,27 @@ const Footer = () => {
 
   return (
     <footer className={styles.footer}>
-      <div className="container">
-        <div className={`${styles.info} flex`}>
-          <div className={styles.footerContact}>
-            <h2>Informações de Contato</h2>
-            <address>
-              <p>
-                <span className={styles.highlight}>E-mail:</span>{' '}
-                <a href="mailto:vsennaselei@gmail.com">vsennaselei@gmail.com</a>
-              </p>
-              <p>
-                <span className={styles.highlight}>Tel:</span>{' '}
-                <a href="tel:5521993966088">21 99396-6088</a>
-              </p>
-              <p>Rio de Janeiro, RJ</p>
-            </address>
-          </div>
-          <div className={styles.footerSocial}>
-            <h2>Redes Sociais</h2>
-            <a className={styles.footerSingleSocial}>
-              GitHub
+      <div className={styles.footerInfo}>
+        <div className="container">
+          <address className={styles.footerContent}>
+            <h2 className="heading-two uppercase">Victor Seleimend</h2>
+            <p className="uppercase">
+              <span className={styles.highlight}>Email: </span>
+              <a href="mailto:vsennaselei@gmail.com">vsennaselei@gmail.com</a>
+            </p>
+            <p className="uppercase">
+              <span className={styles.highlight}>Tel: </span>
+              <a href="tel:5521993966088">21 99396-6088</a>
+            </p>
+            <p className='uppercase'>Rio de Janeiro, RJ</p>
+            <a
+              className={`${styles.wppBtn} cta uppercase`}
+              href="https://wa.me/5521993966088"
+            >
+              Me chame no whats
             </a>
-            <a className={styles.footerSingleSocial}>
-              WhatsApp
-            </a>
-          </div>
+          </address>
         </div>
-        <small>© {year} Victor Seleimend, todos os direitos reservados</small>
       </div>
     </footer>
   );

@@ -1,0 +1,49 @@
+.footer {
+  margin-top: 8rem;
+}
+
+.footerInfo {
+  padding: 8rem 0;
+  background-color: var(--gray-900);
+  color: var(--white);
+  border-top-right-radius: 4rem;
+  border-top-left-radius: 4rem;
+}
+
+.footerInfo h2 {
+  margin-bottom: 1.5rem;
+}
+
+.footerInfo h2,
+.footerInfo a {
+  color: var(--white);
+}
+
+.footerInfo a {
+  text-decoration: solid;
+}
+
+a.wppBtn {
+  display: inline-block;
+  border-radius: 4rem;
+  background-color: #25d366;
+  border: 1px solid #25d366;
+  margin-top: 2rem;
+}
+
+a.wppBtn:hover {
+  color: #25d366;
+}
+
+.footerContent {
+  font-style: normal;
+  font-size: 1.4rem;
+}
+
+.footerContent p {
+  margin-bottom: .5rem;
+}
+
+.highlight {
+  font-weight: 900;
+}
