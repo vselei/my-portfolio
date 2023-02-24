@@ -25,6 +25,7 @@ const Footer = () => {
             </p>
             <p className="uppercase">Rio de Janeiro, RJ</p>
             <a
+              target="_blank"
               className={`${styles.wppBtn} cta uppercase`}
               href="https://wa.me/5521993966088"
             >
@@ -34,7 +35,11 @@ const Footer = () => {
           <div className={styles.social}>
             <h2 className="heading-two uppercase">Redes Sociais</h2>
             <div className="flex gap-1-2 justify-center">
-              <a target='_blank' className="uppercase flex align-center" href="https://github.com/vselei">
+              <a
+                target="_blank"
+                className="uppercase flex align-center"
+                href="https://github.com/vselei"
+              >
                 <svg
                   width="46px"
                   height="46px"
@@ -49,7 +54,11 @@ const Footer = () => {
                 </svg>
                 <span>GitHub</span>
               </a>
-              <a target='_blank' className="uppercase flex align-center" href="https://wa.me/5521993966088">
+              <a
+                target="_blank"
+                className="uppercase flex align-center"
+                href="https://wa.me/5521993966088"
+              >
                 <svg
                   width="45px"
                   height="45px"
