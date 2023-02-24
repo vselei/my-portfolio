@@ -1,5 +1,6 @@
 ---
 import Header from '../components/Header';
+import Footer from '../components/Footer';
 
 export interface Props {
   title: string;
@@ -22,6 +23,7 @@ const path = Astro.url.pathname;
     <Header path={path} client:only />
     <div class="move">
       <slot />
+      <Footer client:only />
     </div>
   </body>
 </html>
@@ -64,7 +66,7 @@ const path = Astro.url.pathname;
   }
 
   *::-webkit-scrollbar-thumb {
-    background-color: rgb(23, 23, 23, .5);
+    background-color: rgb(23, 23, 23, 0.5);
   }
 
   li {
@@ -217,7 +219,8 @@ const path = Astro.url.pathname;
     }
   }
 
-  input, textarea {
+  input,
+  textarea {
     all: unset;
   }
 </style>
