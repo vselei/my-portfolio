@@ -20,8 +20,8 @@ const Footer = () => {
             <p className="uppercase">
               Sou um programador focado e autodidata, sempre procurando me
               aprimorar mais e mais ao longo do tempo. Desde os meus 12 anos
-              venho estudando mais e mais esse mundo tão denso que é o da
-              tecnologia.
+              venho estudando esse mundo tão cheio de inovação que é
+              o da tecnologia.
             </p>
             <a
               href="/pdf/curriculo.pdf"
