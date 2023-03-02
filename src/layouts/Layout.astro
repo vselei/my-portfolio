@@ -4,10 +4,12 @@ import Footer from '../components/Footer';
 
 export interface Props {
   title: string;
+  error?: boolean;
 }
 
-const { title } = Astro.props;
+const { title, error } = Astro.props;
 const path = Astro.url.pathname;
+console.log(error)
 ---
 
 <!DOCTYPE html>
@@ -20,12 +22,12 @@ const path = Astro.url.pathname;
     <title>{title}</title>
   </head>
   <body>
-    <Header path={path} client:only />
-    <div class="move">
+    {!error && <Header path={path} client:only />}
+    <div class={!error ? `move` : ''}>
       <slot />
-      <footer class="footer">
+      {!error && <footer class="footer">
         <Footer client:only />
-      </footer>
+      </footer>}
     </div>
   </body>
 </html>
@@ -181,6 +183,10 @@ const path = Astro.url.pathname;
 
   .gap-1-2 {
     gap: 1.5rem;
+  }
+
+  .h-full {
+    height: 100vh;
   }
 
   .fromLeft {
