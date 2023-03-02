@@ -7,8 +7,6 @@ export interface Props {
 }
 
 const { error } = Astro.props;
-const path = Astro.url.pathname;
-console.log(error);
 ---
 
 <!DOCTYPE html>
@@ -21,7 +19,7 @@ console.log(error);
     <title>Victor Seleimend | {!error ? 'Portfolio' : 'Encaminhando'}</title>
   </head>
   <body>
-    {!error && <Header path={path} client:only />}
+    {!error && <Header client:only />}
     <div class={!error ? `move` : ''}>
       <slot />
       {
