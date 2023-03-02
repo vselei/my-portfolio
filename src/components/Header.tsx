@@ -5,6 +5,7 @@ import styles from '../styles/Header.module.css';
 import { useEffect, useState } from 'react';
 
 const Header = ({ path }: { path: string }) => {
+  const [loc, setLoc] = useState('/');
   const [menuIsVisible, setMenuIsVisible] = useState(
     window.innerWidth > 768 ? true : false
   );
@@ -27,6 +28,12 @@ const Header = ({ path }: { path: string }) => {
       window.removeEventListener('scroll', scrollDetect);
     };
   }, []);
+
+  const handleLinkClick = (e: any, param: string) => {
+    e.preventDefault();
+    history.pushState(null, '', location.origin + param);
+    setLoc(param);
+  };
 
   return (
     <header
@@ -56,38 +63,46 @@ const Header = ({ path }: { path: string }) => {
             className="flex"
           >
             <li>
-              <a href="/" className={path === '/' ? styles.active : ''}>
+              <a
+                onClick={e => handleLinkClick(e, '/')}
+                href="/"
+                className={loc === '/' ? styles.active : ''}
+              >
                 Home
               </a>
             </li>
             <li>
               <a
+                onClick={e => handleLinkClick(e, '/about-me')}
                 href="/about-me"
-                className={path === '/about-me' ? styles.active : ''}
+                className={loc === '/about-me' ? styles.active : ''}
               >
                 Sobre Mim
               </a>
             </li>
             <li>
               <a
+                onClick={e => handleLinkClick(e, '/skills')}
                 href="/skills"
-                className={path === '/skills' ? styles.active : ''}
+                className={loc === '/skills' ? styles.active : ''}
               >
                 Habilidades
               </a>
             </li>
             <li>
               <a
+                onClick={e => handleLinkClick(e, '/projects')}
                 href="/projects"
-                className={path === '/projects' ? styles.active : ''}
+                className={loc === '/projects' ? styles.active : ''}
               >
                 Projetos
               </a>
             </li>
             <li>
               <a
+                onClick={e => handleLinkClick(e, '/contact')}
                 href="/contact"
-                className={path === '/contact' ? styles.active : ''}
+                className={loc === '/contact' ? styles.active : ''}
               >
                 Contato
               </a>
