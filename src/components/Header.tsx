@@ -4,7 +4,7 @@ import styles from '../styles/Header.module.css';
 
 import { useEffect, useState } from 'react';
 
-const Header = ({ path }: { path: string }) => {
+const Header = () => {
   const [loc, setLoc] = useState('/');
   const [menuIsVisible, setMenuIsVisible] = useState(
     window.innerWidth > 768 ? true : false
