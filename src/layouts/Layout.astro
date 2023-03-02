@@ -3,13 +3,12 @@ import Header from '../components/Header';
 import Footer from '../components/Footer';
 
 export interface Props {
-  title: string;
   error?: boolean;
 }
 
-const { title, error } = Astro.props;
+const { error } = Astro.props;
 const path = Astro.url.pathname;
-console.log(error)
+console.log(error);
 ---
 
 <!DOCTYPE html>
@@ -19,15 +18,19 @@ console.log(error)
     <meta name="viewport" content="width=device-width" />
     <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
     <meta name="generator" content={Astro.generator} />
-    <title>{title}</title>
+    <title>Victor Seleimend | {!error ? 'Portfolio' : 'Encaminhando'}</title>
   </head>
   <body>
     {!error && <Header path={path} client:only />}
     <div class={!error ? `move` : ''}>
       <slot />
-      {!error && <footer class="footer">
-        <Footer client:only />
-      </footer>}
+      {
+        !error && (
+          <footer class="footer">
+            <Footer client:only />
+          </footer>
+        )
+      }
     </div>
   </body>
 </html>
