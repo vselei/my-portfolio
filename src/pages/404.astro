@@ -5,7 +5,7 @@ import Layout from '../layouts/Layout.astro';
 <Layout error={true}>
   <div class="flex justify-center align-center h-full">
     <h1 class="uppercase">
-      Ocorreu algum erro, estamos encaminhando você de volta para a Home...
+      Ocorreu algum erro. Estamos encaminhando você de volta para a Home...
     </h1>
   </div>
 </Layout>
@@ -16,5 +16,12 @@ import Layout from '../layouts/Layout.astro';
 <style>
   h1 {
     color: var(--gray-500);
+    padding-left: 2%;
+  }
+
+  @media (min-width: 768px) {
+    h1 {
+      padding-left: 0;
+    }
   }
 </style>
