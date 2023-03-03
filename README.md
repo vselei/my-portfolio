@@ -4,4 +4,6 @@ Me conheça mais um pouco! Acesse meu portfolio, e conheça minhas habilidades, 
 
 Todos os links estão disponibilizados no rodapé do site. Lá você poderá baixar meu CV, e conhecer as minhas redes sociais.
 
+##
+
 Visite o site: <a href="https://my-portfolio-vselei.vercel.app/">myPortfolio</a>
