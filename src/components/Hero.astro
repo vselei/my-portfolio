@@ -15,7 +15,8 @@
       <p class="uppercase">
         Que tal me conhecer mais um pouco? Basta clicar no botão abaixo ;)
       </p>
-      <a class="cta uppercase" href="/contact">Entre em contato</a>
+      <a class="cta uppercase" href="/contact" id="hero-btn">Entre em contato</a
+      >
     </div>
     <div class="bg-img flex-5 flex justify-center">
       <div class="tech-img">
@@ -45,6 +46,22 @@
     </div>
   </div>
 </section>
+<script>
+  const heroBtn = document.querySelector('#hero-btn') as HTMLAnchorElement;
+
+  const getHash = heroBtn.href.slice(1);
+  const scrollableElement = document.querySelector('#contact');
+
+  heroBtn.addEventListener('click', (e) => {
+    e.preventDefault();
+    const elementTop =
+      scrollableElement?.getBoundingClientRect().top! + window.scrollY;
+    window.scrollTo({
+      behavior: 'smooth',
+      top: elementTop - 85
+    });
+  });
+</script>
 
 <style>
   .hero {
