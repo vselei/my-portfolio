@@ -46,7 +46,8 @@ const Header = () => {
     }
 
     const scrollableElement = document.querySelector(`#${getHash}`);
-    const elementTop = scrollableElement?.getBoundingClientRect().top! + window.scrollY;
+    const elementTop =
+      scrollableElement?.getBoundingClientRect().top! + window.scrollY;
     window.scrollTo({
       behavior: 'smooth',
       top: elementTop - 85
@@ -76,7 +77,8 @@ const Header = () => {
 
           <ul
             style={{
-              opacity: menuIsVisible ? 1 : 0
+              opacity: menuIsVisible ? 1 : 0,
+              visibility: menuIsVisible ? 'visible' : 'hidden'
             }}
             className="flex"
           >
