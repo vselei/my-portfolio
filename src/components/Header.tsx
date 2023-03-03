@@ -31,8 +31,26 @@ const Header = () => {
 
   const handleLinkClick = (e: any, param: string) => {
     e.preventDefault();
+
     history.pushState(null, '', location.origin + param);
     setLoc(param);
+
+    const getHash = param.slice(1);
+
+    if (!getHash) {
+      window.scrollTo({
+        behavior: 'smooth',
+        top: 0
+      });
+      return;
+    }
+
+    const scrollableElement = document.querySelector(`#${getHash}`);
+    const elementTop = scrollableElement?.getBoundingClientRect().top! + window.scrollY;
+    window.scrollTo({
+      behavior: 'smooth',
+      top: elementTop - 85
+    });
   };
 
   return (
